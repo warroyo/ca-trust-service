@@ -1,0 +1,7 @@
+resources:
+- ca-secretcontroller.yaml
+configMapGenerator:
+- name: ca-secret-controller
+  namespace: metacontroller
+  files:
+  - sync.py

@@ -1,0 +1,14 @@
+#@ load("@ytt:library", "library")
+#@ load("@ytt:template", "template")
+#@ load("@ytt:data", "data")
+
+#! export vendored ca-trust-service bundle as a var
+#@ ca_trust_service_lib = library.get("bundle/config")
+
+#! define a map for values to be passed to vendored ca-trust-service lib
+#@ def ca_trust_service_values():
+namespace: #@ data.values.namespace
+#@ end
+
+#! render yaml from vendored lib with data values
+--- #@ template.replace(ca_trust_service_lib.with_data_values(ca_trust_service_values()).eval())
