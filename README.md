@@ -69,9 +69,9 @@ once this is created you should see a secret generated for the cluster in the na
 generate the controller yaml
 
 ```
-cd ca-trust-sevrice/distribution/ca-secret-controller
+cd ca-trust-service/distribution/ca-secret-controller
 kubectl kustomize > ca-secret-controller.yaml
-cp ca-secret-controller.yaml ../../config/_yy_lib/bundle/config/upstream/.
+cp ca-secret-controller.yaml ../../config/_ytt_lib/bundle/config/upstream/.
 ```
 
 generate the metacontroller yaml
