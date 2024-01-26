@@ -12,17 +12,17 @@ apiVersion: data.packaging.carvel.dev/v1alpha1
 kind: Package
 metadata:
   creationTimestamp: null
-  name: ca-trust-service.fling.vsphere.vmware.com.1.0.1
+  name: ca-trust-service.fling.vsphere.vmware.com.1.0.2
 spec:
   refName: ca-trust-service.fling.vsphere.vmware.com
-  releasedAt: "2024-01-26T20:52:40Z"
+  releasedAt: "2024-01-26T22:17:08Z"
   template:
     spec:
       deploy:
       - kapp: {}
       fetch:
       - imgpkgBundle:
-          image: ghcr.io/warroyo/ca-trust-service@sha256:6886864ec67b0c538a13f31109137fb5863201f932346be574451a6c0e84e599
+          image: ghcr.io/warroyo/ca-trust-service@sha256:39029f005c3026c765595ef39129238738dbefe12fd1bf8990585ba7555dbf27
       template:
       - ytt:
           paths:
@@ -35,4 +35,4 @@ spec:
     openAPIv3:
       default: null
       nullable: true
-  version: 1.0.1
+  version: 1.0.2
