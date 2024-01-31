@@ -3,7 +3,7 @@
 
 #@overlay/match by=overlay.subset({"kind":"Deployment", "metadata": {"name": "ca-secret-controller"}})
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 spec:
   template:
