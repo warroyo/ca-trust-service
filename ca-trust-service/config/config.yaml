@@ -8,6 +8,7 @@
 #! define a map for values to be passed to vendored ca-trust-service lib
 #@ def ca_trust_service_values():
 namespace: #@ data.values.namespace
+python_image: #@ data.values.python_image
 #@ end
 
 #! render yaml from vendored lib with data values

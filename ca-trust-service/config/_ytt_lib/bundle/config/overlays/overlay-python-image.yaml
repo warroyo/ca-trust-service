@@ -1,0 +1,19 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:overlay", "overlay")
+
+#@overlay/match by=overlay.subset({"kind":"Deployment", "metadata": {"name": "ca-secret-controller"}})
+---
+apiVersion: v1
+kind: Deployment
+spec:
+  template:
+    spec:
+      containers:
+      #@overlay/match by="name"
+      - name: controller
+        #@overlay/match missing_ok=False
+        image: #@ data.values.python_image
+
+
+
+

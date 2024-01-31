@@ -3,3 +3,4 @@
 
 #! The namespace in which to deploy ca-trust-service.
 namespace: ca-trust-service
+python_image: python:3.9
